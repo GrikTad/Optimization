@@ -3,7 +3,7 @@ import math
 from numpy import  *
 import sys
 import sympy as sy
-from AnimateItarations import funcs
+import funcs
 
 def ExactLineSearchMethod(f,x,alpha,p):
     condition =np.dot(f(x+alpha*p),p)==0

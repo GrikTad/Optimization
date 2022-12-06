@@ -82,11 +82,21 @@ def hess(y):
     return np.array([[hf(y) for hf in Hs] for Hs in Hlambdify])
 
 ##Testing
-x0_vals,x1_vals,f_vals = ModifiedNewtonMethodExactLineSearchMethod(fun,gfun,hess,np.zeros(n)+np.array([5,6]))
+x0_vals,x1_vals,f_vals = ModifiedNewtonMethodExactLineSearchMethod(fun,gfun,hess,np.zeros(n)+np.array([0,0]))
 x0_min=-5
 x0_max=+5
 x1_min=-5
 x1_max=+5
 funcs.Animate2D(fun,x0_min,x0_max,x1_min,x1_max,x0_vals,x1_vals)
-#funcs.Animate3D(fun,x0_min,x0_max,x1_min,x1_max,x0_vals,x1_vals,f_vals)
-
+x0_vals,x1_vals,f_vals = ModifiedNewtonMethodExactLineSearchMethod(fun,gfun,hess,np.zeros(n)+np.array([2,3]))
+x0_min=-5
+x0_max=+5
+x1_min=-5
+x1_max=+5
+funcs.Animate2D(fun,x0_min,x0_max,x1_min,x1_max,x0_vals,x1_vals)
+x0_vals,x1_vals,f_vals = ModifiedNewtonMethodExactLineSearchMethod(fun,gfun,hess,np.zeros(n)+np.array([1,3]))
+x0_min=-5
+x0_max=+5
+x1_min=-5
+x1_max=+5
+funcs.Animate2D(fun,x0_min,x0_max,x1_min,x1_max,x0_vals,x1_vals)
